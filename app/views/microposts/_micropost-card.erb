@@ -1,0 +1,23 @@
+<div class="micropost-card">
+  <div class="micropost-card-content">
+    <p>
+      <%= micropost.content %>
+    </p>
+  </div>
+
+  <div class="micropost-card-info">
+    <%= link_to micropost.user.name, user_path(micropost.user.id) %>
+    <span>
+            <%= micropost.created_at %>
+      <% if micropost.created_at != micropost.updated_at %>
+              <%= "(edited)"  %>
+            <% end %>
+          </span>
+    <%= link_to 'Show', micropost %>
+    <!-- only shown edit / destroy links when it's your content -->
+    <% if @users_microposts.include? micropost %>
+      <%= link_to 'Edit', edit_micropost_path(micropost) %>
+      <%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+</div>

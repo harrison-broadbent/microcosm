@@ -1,0 +1,19 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<h2>Microposts</h2>
+<%= render 'microposts/micropost-feed', microposts: @microposts %>
+
+
+<% if current_user == @user %>
+  <%= link_to 'Edit', edit_user_registration_path(@user) %> |
+<% end %>
+<%= link_to 'Home', root_path %>

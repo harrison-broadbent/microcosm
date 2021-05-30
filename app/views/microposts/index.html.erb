@@ -1,0 +1,18 @@
+
+<div class="micropost">
+  <h1>MicroPosts</h1>
+
+  <%= render 'microposts/micropost-feed', microposts: @microposts %>
+
+  <br>
+
+  <% if user_signed_in? %>
+    <div class="micropost-new">
+      <h2>New Micropost</h2>
+      <%= render 'microposts/form', micropost: @micropost %>
+    </div>
+  <% else %>
+    <%= link_to 'Sign Up to post a Micropost.', new_user_registration_path %>
+  <% end %>
+
+</div>
