@@ -17,3 +17,8 @@
 * {
     font-family: "Inter", sans-serif;
 }
+
+body {
+    width: 70%;
+    margin: 0 auto;
+}
