@@ -1,24 +1,7 @@
-# README
+# Microcosm
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> A toy Ruby On Rails app to serve as a learning tool.
 
-Things you may want to cover:
+Microcosm is a very feature light (and design light, security light, really rather insubstantial) social network. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Users can signup, post, and see what other people have posted. Following users coming soon! 
