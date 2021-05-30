@@ -1,5 +1,5 @@
 <div class="micropost-feed">
-  <% @microposts.reverse.each do |micropost| %>
+  <% @microposts.each do |micropost| %>
     <%= render 'microposts/micropost-card', micropost: micropost %>
   <% end %>
 </div>

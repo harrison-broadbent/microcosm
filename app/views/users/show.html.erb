@@ -9,6 +9,24 @@
   <%= @user.email %>
 </p>
 
+<%= link_to followers_user_path do %>
+  <p>
+    <strong>Followers:</strong>
+    <%= @user.followers.count %>
+  </p>
+<% end %>
+
+<%= link_to following_user_path do %>
+  <p>
+    <strong>Following:</strong>
+  <%= @user.following.count %>
+  </p>
+<% end %>
+
+<%= render 'follow_form' %>
+
+<hr>
+
 <h2>Microposts</h2>
 <%= render 'microposts/micropost-feed', microposts: @microposts %>
 
